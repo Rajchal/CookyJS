@@ -1,0 +1,278 @@
+:root {
+    --primary-green: #70A15F;
+    --light-green: #E8F0E6;
+    --dark-green: #4A6B3F;
+    --text-on-green: #FFFFFF;
+}
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+body {
+    background-color: #F8FAF7;
+    color: #333333;
+}
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+.headdy{
+color: white;
+font-weight: bold;
+font-size: 50px; 
+}
+.dish-box {
+background-color: #70A15F;/* Fresh green gradient */
+padding: 20px; /* Padding around the box */
+border-radius: 10px; /* Rounded corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+max-width: 600px; /* Maximum width for the box */
+margin: 20px auto; /* Center the box */
+}
+
+.dish-ingredien {
+text-align: center; /* Center the text */
+}
+
+
+
+
+
+
+.dish-container {
+    margin-top: 50px;
+}
+.dish-image {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+}
+.dish-details {
+    margin-top: 20px;
+}
+.dish-cat, .dish-ar {
+background: linear-gradient(135deg, #e0f7e9, #c8e6c9); /* Fresh green gradient */
+margin: 5px 0;
+padding: 10px 15px; /* Adjusted padding for better spacing */
+border-radius: 8px; /* Slightly more rounded corners */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+display: inline-block; /* Ensure background only covers text */
+align-items: center;
+color: #2e7d32; /* Dark green text color for contrast */
+font-weight: bold; /* Make text bold */
+}
+
+
+.dish-ingredients, .dish-instructions {
+    list-style-type: none;
+    padding: 0;
+}
+.dish-ingredients li, .dish-instructions li {
+    background: #FFFFFF;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+.ingredient-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+    background-color: #F0F0F0;
+}
+.ingredient-image.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #666666;
+    text-align: center;
+}
+.video-container {
+    margin-top: 20px;
+    display: none;
+}
+.toggle-button {
+background-color: #FF0000; /* YouTube red */
+color: #FFFFFF; /* White text */
+border: none;
+padding: 10px 20px;
+border-radius: 4px; /* Slightly rounded corners */
+cursor: pointer;
+transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+margin-bottom: 20px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+font-family: Arial, sans-serif; /* YouTube font style */
+font-size: 16px; /* Font size */
+display: flex; /* Flexbox for icon and text alignment */
+align-items: center; /* Center items vertically */
+}
+
+.toggle-button i {
+margin-right: 10px; /* Space between icon and text */
+}
+
+.toggle-button:hover {
+background-color: #CC0000; /* Darker red on hover */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+}
+
+.info-button {
+    background-color: var(--primary-green);
+    color: var(--text-on-green);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-left: 10px;
+}
+.info-button:hover {
+    background-color: var(--dark-green);
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #FFFFFF;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--primary-green);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.modal-header {
+    background-color: var(--primary-green);
+    color: var(--text-on-green);
+    padding: 10px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: -20px -20px 20px -20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-body {
+    background-color: var(--light-green);
+    padding: 20px;
+    border-radius: 5px;
+}
+.close {
+    color: var(--text-on-green);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+.close:hover,
+.close:focus {
+    color: #F0F0F0;
+    text-decoration: none;
+    cursor: pointer;
+}
+.nutrient-list {
+    list-style-type: none;
+    padding: 0;
+}
+.nutrient-list li {
+    background-color: #FFFFFF;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.ingredient-modal-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.ingredient-modal-details {
+    display: flex;
+    flex-direction: column;
+}
+.navbar-nav .nav-link {
+    color: #70A15F !important;
+    opacity: 0.6;
+    transition: opacity 0.3s, color 0.3s;
+}
+.navbar-nav .nav-link:hover {
+    opacity: 1;
+    color: #507A3F !important;
+}
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    opacity: 1;
+}
+.navbar {
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+
+.navbar-brand img {
+height: 50px; /* Adjust this to your desired height */
+}
+
+.nav-link {
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+.dropdown-submenu {
+position: relative;
+}
+.dropdown-menu {
+max-height: 90vh; /* Adjust as needed */
+overflow-y: auto;
+overflow-x: hidden;
+}
+.dropdown-submenu {
+position: relative;
+}
+.dropdown-menu {
+max-height: 90vh; /* Adjust as needed */
+overflow-y: auto;
+overflow-x: hidden;
+}
+.alert-drop {
+animation: dropDown 0.5s ease-in-out;
+border-radius: 50px;
+}
+
+@keyframes dropDown {
+0% {
+    transform: translateY(-100%);
+}
+100% {
+    transform: translateY(0);
+}
+}

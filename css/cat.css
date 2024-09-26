@@ -1,0 +1,201 @@
+body {
+    background-color: rgba(248, 249, 250, 0.8);
+    position: relative;
+    min-height: 100vh;
+}
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.playwrite-gb-j-geda {
+font-family: "Playwrite GB J", cursive;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+}
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+.search-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    position: relative;
+}
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.navbar-nav .nav-link {
+    color: #70A15F !important;
+    opacity: 0.6;
+    transition: opacity 0.3s, color 0.3s;
+}
+.navbar-nav .nav-link:hover {
+    opacity: 1;
+    color: #507A3F !important;
+}
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    opacity: 1;
+}
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: 0 0 5px 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+}
+.suggestion-item:hover {
+    background-color: #f8f9fa;
+}
+.navbar {
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+
+.navbar-brand img {
+height: 50px; /* Adjust this to your desired height */
+}
+
+.nav-link {
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+.navbar-brand img {
+height: 50px; /* Adjust this to your desired height */
+}
+
+.nav-link {
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+ .navbar-nav .nav-link {
+    color: #70A15F !important;
+    opacity: 0.6;
+    transition: opacity 0.3s, color 0.3s;
+}
+.navbar-nav .nav-link:hover {
+    opacity: 1;
+    color: #507A3F !important;
+}
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    opacity: 1;
+}
+.search-container {
+    margin: 20px 0;
+}
+.playwrite-gb-j-geda {
+font-family: "Playwrite GB J", cursive;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+}
+
+.category-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    position: relative;
+}
+.category-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0f3502;
+}
+
+/* Card styling similar to the image provided */
+.food-card {
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures content stays within the rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.2s ease-in-out;
+    background-color: white;
+    margin-bottom: 20px; /* Space between cards */
+}
+
+.food-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+.card-img-top {
+    height: 200px; /* Ensure images are of consistent height */
+    object-fit: cover; /* Ensure the image fills the space and doesn't distort */
+    width: 100%;
+}
+
+.card-body {
+    padding: 15px;
+    text-align: center; /* Center content */
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.dropdown-submenu {
+position: relative;
+}
+.dropdown-menu {
+max-height: 90vh; /* Adjust as needed */
+overflow-y: auto;
+overflow-x: hidden;
+}
+.alert-drop {
+animation: dropDown 0.5s ease-in-out;
+border-radius: 50px;
+}
+
+@keyframes dropDown {
+0% {
+    transform: translateY(-100%);
+}
+100% {
+    transform: translateY(0);
+}
+}

@@ -1,0 +1,47 @@
+:root {
+    --primary-green: #70A15F;
+    --light-green: #E8F0E6;
+    --dark-green: #4A6B3F;
+    --text-on-green: #FFFFFF;
+}
+
+body {
+    background-color: #F8FAF7;
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
+
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+.alert-drop {
+animation: dropDown 0.5s ease-in-out;
+border-radius: 50px;
+}
+
+@keyframes dropDown {
+0% {
+    transform: translateY(-100%);
+}
+100% {
+    transform: translateY(0);
+}
+}
