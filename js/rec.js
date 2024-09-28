@@ -199,17 +199,35 @@ function showAlert(message) {
 
      // Initialize Swiper
      new Swiper('.swiper-container', {
-         loop: true,
-         navigation: {
-             nextEl: '.swiper-button-next',
-             prevEl: '.swiper-button-prev',
-         },
-         slidesPerView: 4, // Show 3 cards at a time
-         spaceBetween: 30, // Space between cards
-         centeredSlides: true, // Center the active slide
-         effect: 'slide', // Use slide effect
-         speed: 600, // Adjust speed if needed
-     });
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 4, // Default for larger screens
+        spaceBetween: 30, // Space between cards
+        centeredSlides: true, // Center the active slide
+        effect: 'slide', // Use slide effect
+        speed: 600, // Adjust speed if needed
+        breakpoints: {
+            320: { // Mobile devices
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            480: { // Small tablets
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: { // Tablets
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1024: { // Desktops
+                slidesPerView: 4,
+                spaceBetween: 30,
+            }
+        }
+    });
  }
 
  function redirectToPage(dishName) {
