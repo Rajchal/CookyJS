@@ -85,13 +85,11 @@
 
         currentImageIndex = nextImageIndex;
         nextImageIndex = (nextImageIndex + 1) % backgroundImages.length;
-        if(nextImageIndex == 20){
-            currentImage.remove();
-            currentImage.remove();currentImage.remove();
-            currentImage.opacity = '0';
-            currentImage.opacity = '0';
-            currentImage.opacity = '0';
-            nextImageIndex = 1;}
+        document.addEventListener('visibilitychange', function() {
+            if (document.visibilityState === 'visible') {
+                window.location.reload();
+            }
+        });
         const newNextImage = document.createElement('div');
         newNextImage.className = 'background-image';
         newNextImage.style.backgroundImage = `url(${backgroundImages[nextImageIndex]})`;

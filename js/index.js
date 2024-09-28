@@ -130,6 +130,7 @@ const backgroundImages = [
 let currentImageIndex = 0;
 let nextImageIndex = 1;
 
+
 function changeBackgroundImage() {
 const currentImage = backgroundContainer.querySelector('.background-image.active');
 const nextImage = backgroundContainer.querySelector('.background-image:not(.active)');
@@ -144,16 +145,14 @@ if (currentImage) {
 nextImage.style.backgroundImage = `url(${backgroundImages[nextImageIndex]})`;
 nextImage.style.opacity = '0.3';
 nextImage.classList.add('active');
-
+document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'visible') {
+        window.location.reload();
+    }
+});
 currentImageIndex = nextImageIndex;
 nextImageIndex = (nextImageIndex + 1) % backgroundImages.length;
- if(nextImageIndex == 20){
-    currentImage.remove();
-    currentImage.remove();currentImage.remove();
-    currentImage.opacity = '0';
-    currentImage.opacity = '0';
-    currentImage.opacity = '0';
-    nextImageIndex = 1;}
+
 const newNextImage = document.createElement('div');
 newNextImage.className = 'background-image';
 newNextImage.style.backgroundImage = `url(${backgroundImages[nextImageIndex]})`;
