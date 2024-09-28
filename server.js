@@ -38,9 +38,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'js')));
 app.use(express.static(path.join(__dirname, 'css')));
 require('dotenv').config();
-const mongo_id=process.env.MONGO_ID;
-const mongo_k=process.env.MONGO_PASS;
-console.log();
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log('MongoDB connected'))
