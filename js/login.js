@@ -63,7 +63,7 @@ whole.innerHTML=`
                                 </form>
                             </div>
                             <div class="card-footer text-center py-3">
-                                <div class="small"><a href="signup.html">Need an account? Sign up!</a></div>
+                                <div class="small"><a href="/signup">Need an account? Sign up!</a></div>
                             </div>
                         </div>
                     </div>
