@@ -241,7 +241,7 @@ const backgroundContainer = document.getElementById('background-container');
         function showHappy(message) {
         const alertPlaceholder = document.getElementById('alert-placeholder');
         const alert = `
-            <div class="alert alert-danger alert-dismissible fade show alert-drop" role="alert">
+            <div class="alert alert-success alert-dismissible fade show alert-drop" role="alert">
                 ${message}
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
