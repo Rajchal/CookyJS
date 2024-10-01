@@ -42,11 +42,6 @@ const backgroundContainer = document.getElementById('background-container');
 
             currentImageIndex = nextImageIndex;
             nextImageIndex = (nextImageIndex + 1) % backgroundImages.length;
-            document.addEventListener('visibilitychange', function() {
-                if (document.visibilityState === 'visible') {
-                    window.location.reload();
-                }
-            });
             const newNextImage = document.createElement('div');
             newNextImage.className = 'background-image';
             newNextImage.style.backgroundImage = `url(${backgroundImages[nextImageIndex]})`;
