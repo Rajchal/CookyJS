@@ -1,4 +1,6 @@
 const whole=document.getElementById('whole');
+const title=document.getElementById('title');
+title.innerText=`Cookfresh-Search Meals`;
 whole.innerHTML=`
 <div id="background-container"></div>
     <nav class="navbar navbar-expand-lg bg-white shadow p-2">
